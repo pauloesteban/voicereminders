@@ -1,5 +1,5 @@
-# Directorio Telefónico
-GUI para directorio telefónico
+# Recordatorios de voz
+GUI para recordatorios de voz
 
 ### Integrantes:
 
