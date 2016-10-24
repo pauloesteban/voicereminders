@@ -1,0 +1,241 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+\author{grupo recordatorio de voz}
+
+
+\begin{document}
+\begin{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includegraphics[scale=1]{i.png} 
+
+
+\begin{center}
+\vspace{1cm}
+\textbf{UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO} 
+
+
+\vspace{2ex}
+\textbf{FACULTAD DE CIENCIAS DE LA INGENÍERÍA}
+
+
+\vspace{3ex}
+\textbf{ESCUELA DE ELECTRICA}
+
+
+\vspace{2cm} % dar espacio
+
+\textbf{CARRERA:}
+INGENIERÍA EN TELEMÁTICA
+\vspace{4ex}
+
+
+\textbf{NOMBRES:}  Brayan Antonio Ibarra Carreño  % Negrilla 
+\vspace{5ex} % dar espacio
+
+
+  José Gregorio Guillen Sanchez % Negrilla 
+\vspace{5ex} % dar espacio
+
+
+  Jordy ariel Zambrano Muñoz % Negrilla 
+\vspace{5ex} % dar espacio
+
+  Jaime David Troya Tito % Negrilla 
+\vspace{5ex} % dar espacio
+
+\textbf{CARRERA:}  Ingeniería en telemática % Negrilla 
+\vspace{5ex}
+
+\textbf{TUTOR:} Ing. Chiliguano Torres
+\end{center}
+
+
+\vspace{1ex}
+\begin{figure}[h!]
+\begin{center}
+
+\end{center}
+\end{figure}
+
+
+\begin{center}  
+\textbf{PERIODO:}
+
+2016 - 2017
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1cm}
+
+\textbf{INFORME DEL PROTOTIPO DE BAJA FIDELIDAD PARA LA APLICACIÓN DE RECORDATORIO DE VOZ} 
+\end{center}
+\vspace{1cm}
+\textbf{1. Introducción:}
+
+\vspace{1ex}
+Para el diseño de interfaz de usuario de una aplicación, es necesario tener en cuenta principios de diseño que permitan un uso fácil y práctico. Por este motivo, se realizaron diferentes prototipos a lo largo del diseño de la interfaz para ir verificando de primera mano que problemas habituales tiene el usuario cuando hace uso del sistema y trabajar en ello para así mejorar la interacción de este con la aplicación.
+
+\vspace{1ex}
+El objetivo es diseñar una interfaz de usuario correspondiente a una aplicación de recordatorio de voz. Para ello se ha realizado un prototipo inicial o de baja fidelidad donde se muestra una interfaz preliminar teniendo en cuenta los requisitos previos del usuario.
+Para el desarrollo del prototipo de baja fidelidad en primera instancia solo se recurrió al uso de lápiz y papel para maquetar interfaces en pantallas, dibujando a mano cajas con controles garabateados y realizando uno por cada pantalla de uso, para luego ser digitalizada con el programa "Easy Paint Tool SAI" exponiendo una cercanía a la interfaz final de la aplicación.
+
+\vspace{1ex}
+Tras el análisis del prototipo desarrollado se expresan una serie de conclusiones generales con respecto a su creación y como se puede mejorar la calidad, analizando detenidamente las ventajas y desventajas que los usuarios encontraron de acuerdo a un número de preguntas realizadas.
+
+\vspace{1ex}
+En el siguiente punto se reflejan los principales requisitos que debe tener la aplicación a desarrollar para cubrir de forma completa con las necesidades de los usuarios.
+
+\vspace{1ex}
+\textbf{2. Preparación:}
+\vspace{1ex}
+
+Los principales requisitos que se han de tener en cuenta a la hora de diseñar la aplicación de recordatorio de voz serían: 
+\vspace{1ex}
+
+Que se trate de una aplicación apta para todos los usuarios, teniendo en cuenta que un alto porcentaje de estos no tiene conocimientos informáticos se tratará de simplificar al máximo la interfaz reduciendo con esto la carga cognitiva del usuario \cite{hassan2004diseno} permitiendo que pueda manipular y navegar a través de sus opciones sin problemas, de forma práctica y brindando una buena calidad de uso.
+
+
+
+
+Al tratarse de una aplicación de recordatorio de voz, la idea es que su función sea respectivamente la de poder insertar alarmas en ciertas fechas, donde al activarse pueda escuchar el usuario su propia nota de voz personalizada, recordándole aquello que debe realizar o el motivo por el cual creo la alarma. De acuerdo a opiniones de usuarios, incluiremos ciertas opciones para una configuración visual o del sonido referente al objetivo principal que cumple la aplicación (filtros de grabación y cambio de colores), pero no se aplicaran otras opciones sugeridas no relacionadas con el tema (alarmas de vídeo o mini juegos), porque se puede generar una pérdida de contexto en el usuario, lo cual puede hacer que se frustre y deje de utilizar la aplicación.
+\vspace{1ex}
+
+Por tanto y teniendo en cuenta todo lo anteriormente expuesto, se ingenió una aplicación con una usabilidad fácil de aprender, entender y operar, además que sea atractiva, es decir, que llame la atención acceder a esta, sin que sea necesario llenarla de objetos, menús o imágenes (la creación de iconos y menús ambiguos que pueden generar un despiste), logrando una satisfacción agradable al usuario.
+\vspace{1ex}
+
+\textbf{3. Diseño:}
+
+Se empezó el diseño del prototipo de baja fidelidad de la interfaz del recordatorio de voz, realizando los bocetos correspondientes con papel y lápiz, tomando en cuenta la agrupación de los menús, iconos, cuadros con información, etc. Ordenándola de la misma forma en todas las secciones de la interfaz. Con esto se permite que el usuario tenga un mayor grado de asimilación de la web, aportando reconocimiento antes que recuerdo \cite{nielsen199510} , si el usuario es capaz de manipular la ventana principal será capaz de utilizar sin problemas el resto de la aplicación.
+\vspace{1ex}
+
+Al analizar la Ilustración 1: Menú principal del  prototipo de Baja fidelidad del recordatorio de voz, correspondiente al inicio de la aplicación, se observa la estructura que tendrá la aplicación en todas sus páginas. Se encuentra el Logo representativo, versión y las 3 principales opciones representativas con sus respectivas leyendas para acceder a las diferentes secciones, el modo de navegación es lo más coherente posible, se resalta siempre los elementos que más se necesitan, como el retorno o guardar cambios, con el uso de iconos como metáfora relacionada (el dibujo de una flecha hacia atrás o un disquete). La navegación siempre se realiza utilizando estos iconos, y el usuario los puede detectar fácilmente por el tamaño y su forma gráfica.
+
+\vspace{1ex}
+\begin{center}
+
+\includegraphics[scale=1]{imagen1.png} 
+
+
+\textit{Ilustración 1: Menú principal del prototipo de Baja fidelidad del recordatorio de voz }
+\end{center}
+\vspace{1ex}
+
+De acuerdo a las opiniones recopiladas vía facebook a un número de usuarios (véase en anexos), se llegó a añadir una nueva ventana inicial (Ilustración 2), donde se muestra un icono para ayuda general e información relevante antes de iniciar la aplicación, si el usuario ya leyó estos datos puede iniciar en cualquier momento solo dando click en el botón play con la leyenda de ?Iniciar?.
+\vspace{1ex}
+\begin{center}
+\includegraphics[scale=1]{imagen2.png} 
+
+
+\textit{Ilustración 2: Ventana Inicial}
+\end{center}
+\vspace{1ex}
+Para la navegación consecutiva del uso de la aplicación como lo muestra la Ilustración 3 y 4, se incluirá un botón de ayuda en cada una de estas ventanas, la información que mostrará dicho botón es las que está fuera del margen del recuadro, no obstante hay que tener en cuenta que al momento de ir elaborando la aplicación se pueden realizar pequeños cambios, lo que amerita que se agregue, modifique o elimine, cierta información de este ícono de ayuda.
+\vspace{1ex}
+\begin{center}
+\includegraphics[scale=1]{imagen3.png} 
+
+
+\textit{Ilustración 3: Ventana de "Nuevo"}
+\end{center}
+\vspace{1ex}
+En la ventana de navegación ?Nuevo? el usuario podrá almacenar sus diferentes recordatorios, ubicando la fecha y hora correspondiente para activarse, inicialmente solo podía dejar como alarma notas de voz personalizadas, sin embargo de acuerdo a las opiniones recopiladas, se añadió la función de aplicar también alguna música de su ordenador, cabe recalcar que es mucho mejor que su recordatorio posea una grabación suya donde explique los detalles que debe realizar al sonar la respectiva alarma.	
+\vspace{1ex}
+\begin{center}
+\includegraphics[scale=1]{imagen4.png}
+
+ 
+\textit{Ilustración 4: Ventana de "Lista"}
+\end{center}
+\vspace{1ex}
+En la ventana de navegación de ?Lista? podrá ver los recordatorios guardados por usted y a su vez, independientemente puede oír las notas de voz que grabó. Hay dos maneras prácticas de observar los recordatorios que se aproximan, puede ser en una lista situada en la parte izquierda o por medio del calendario al otro extremo. Las ventanas emergentes hacen que la visualización de información sea más rápida, es probable que no solo en la función del calendario aparezca (véase la Ilustración 5 que muestra el anuncio emergente) sino en múltiples ocasiones al manipular la aplicación, por ejemplo, al no llenar un campo en el momento de crear un nuevo recordatorio o querer borrar alguno de estos.
+\vspace{1ex}
+\begin{center}
+\includegraphics[scale=1]{imagen5.png}
+
+ 
+\textit{Ilustración 5: Anuncio Emergente del Calendario}
+\end{center}
+\vspace{1ex}
+En la ilustración 6 puede observar la ventana de configuración, puede decirse que aquí hay que pulir algunas funciones, estas opciones que se presentan son de acuerdo a lo que sugerían los usuarios, un claro ejemplo es el del cambio del color, porque no todos los usuarios veían la aplicación ideal del mismo tono, así que personalizar este aspecto, motiva al usuario a personalizar su aplicación de acuerdo a su gusto o personalidad. Aquí han de haber muchos cambios pero para una base inicial del prototipo de baja fidelidad, lo establecimos de este modo.
+\vspace{1ex}
+\begin{center}
+\includegraphics[scale=1]{imagen6.png}
+
+
+\textit{Ilustración 6: Ventana de "Configuración"} 
+\end{center}
+\vspace{1ex}
+Para finalizar no hay nada mejor como ver algún mensaje que te anime o de agradecimiento, por eso se pensó en una pequeña ventana de tiempo limitado como observamos en la ilustración 7, mostrando gratitud (o tal vez alguna otra frase genial).
+\vspace{1ex}
+\begin{center}
+\includegraphics[scale=1]{imagen7.png} 
+
+
+\textit{Ilustración 7: Ventana Final}
+\end{center}
+
+\vspace{4cm}
+
+\textbf{6. Anexos:}
+\vspace{1cm}
+\begin{center}
+\includegraphics[scale=1]{hola1.png} 
+
+
+\textit{Anexo 1: Opiniones del prototipo de Baja Fidelidad (Vía Facebook ? Ibarra Brayan)}
+\end{center}
+\vspace{1cm}
+
+\begin{center}
+\includegraphics[scale=1]{hola2.png} 
+
+
+\textit{Anexo 2: Boceto general del prototipo de baja fidelidad}
+\end{center}
+
+\vspace{1cm}
+\begin{center}
+ \includegraphics[scale=1]{hola3.png} 
+ 
+ 
+\textit{Anexo 3: Encuesta vía Facebook del Prototipo de Baja Confidencialidad }
+ 
+ 
+ \includegraphics[width=9cm]{14796271_10208944361060388_157597293_o.jpg} 
+ 
+ 
+\textit{Anexo 3: Encuesta vía Facebook del Prototipo de Baja Confidencialidad ? Zambrano Jordy}
+
+ 
+\end{center}
+
+
+
+
+
+\author{hassan2004diseno}
+%bibiografia
+\bibliographystyle{apalike} 
+\bibliographystyle{nielsen199510} 
+\bibliography{bibliografia}
+
+
+
+
+
+
+\vspace{1ex}
+
+
+
+\end{document}
