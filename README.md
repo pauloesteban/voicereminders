@@ -9,3 +9,8 @@ GUI para recordatorios de voz
 
 ### Académico:
 Paulo Chiliguano
+
+### TODO
+- Corregir pantalla de grabación para cerrarla
+- Validación para guardar el recordatorio
+- Ubicación de íconos en pantalla de grabación
