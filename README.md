@@ -14,6 +14,6 @@ Paulo Chiliguano
 Para ejecutar el programa es necesario instalar la librerìa "jcalendar".
 
 ### TODO
-- Corregir pantalla de grabación para cerrarla
-- Validación para guardar el recordatorio
-- Ubicación de íconos en pantalla de grabación
+- Corregir pantalla de grabación para cerrarla (Listo)
+- Validación para guardar el recordatorio (En proceso)
+- Ubicación de íconos en pantalla de grabación (Listo)
