@@ -15,5 +15,5 @@ Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versió
 
 ### TODO
 - Validación para guardar el recordatorio (Listo).
-- Validación correcta de fecha (tomando en cuenta año bisiesto).
+- Validación correcta de fecha (tomando en cuenta año bisiesto). (En proceso)
 
