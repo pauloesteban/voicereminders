@@ -11,9 +11,9 @@ GUI para recordatorios de voz
 Paulo Chiliguano
 
 ### NOTA:
-Para ejecutar el programa es necesario instalar la librerìa "jcalendar".
+Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versión 1.3.3.
 
 ### TODO
-- Corregir pantalla de grabación para cerrarla (Listo)
-- Validación para guardar el recordatorio (En proceso)
-- Ubicación de íconos en pantalla de grabación (Listo)
+- Validación para guardar el recordatorio (Listo).
+- Validación correcta de fecha (tomando en cuenta año bisiesto).
+
