@@ -14,4 +14,7 @@ Paulo Chiliguano
 Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versión 1.3.3.
 
 ### TODO
-- Reformular interacción para grabar y agregar alarma.
+- Grabar audio (Completo)
+- Ver lista con la fecha/hora de grabación y reproducir audios (completo)
+- Diseño final de la interfaz gráfica (en proceso)
+- Vincular alarmas a los audios (en proceso)
