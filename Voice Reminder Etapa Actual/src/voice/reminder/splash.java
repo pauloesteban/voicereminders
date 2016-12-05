@@ -28,7 +28,7 @@ public class splash extends javax.swing.JPanel {
     public void velocidadDeCarga() throws InterruptedException{ 
         for(int i = 0; i<=100; i++){ 
             Thread.sleep(40); 
-            progreso.setForeground(Color.GREEN); 
+            progreso.setForeground(Color.RED); 
             progreso.setValue(i); 
             if (i == 40) {
                estados.setText("Versión 1.3"); 
@@ -45,30 +45,15 @@ public class splash extends javax.swing.JPanel {
         progreso = new javax.swing.JProgressBar();
         estados = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         progreso.setBackground(new java.awt.Color(255, 128, 0));
         progreso.setForeground(new java.awt.Color(255, 204, 0));
         progreso.setBorderPainted(false);
+        add(progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 374, 500, 30));
 
         estados.setText("Cargando modulos");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(progreso, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(estados)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 294, Short.MAX_VALUE)
-                .addComponent(estados)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        add(estados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estados;

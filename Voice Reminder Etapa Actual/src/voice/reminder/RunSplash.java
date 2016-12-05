@@ -13,18 +13,15 @@ public class RunSplash extends JWindow{
         Ppagina1 ventana = new Ppagina1();       
         ventana.setLocationRelativeTo(null);
         this.add(p, BorderLayout.CENTER); 
-        this.setSize(p.getWidth(), p.getHeight());// se establece el tamaño del RunSplash 
-        // ahora y lo mas importante se quita toda()+75 la decoracion de la ventana  
-        //marco, botones minimizar, cerrar con el metodo setUndecorated(true) 
-        //para dar el efecto de que solo se muestra la imagen con la barra... 
-        this.setLocationRelativeTo(null);// se muestra el splash en el centro 
-        setVisible(true); // se visualiza el Splash Screen 
+        this.setSize(p.getWidth(), p.getHeight()); 
+        this.setLocationRelativeTo(null);
+        setVisible(true);
         p.velocidadDeCarga();
-        this.dispose();// se cierra el Splash cuando termina el recorrido de la barra
+        this.dispose();
         ventana.setVisible(true);
     } 
      
     public static void main(String args[]) throws InterruptedException { 
-        new RunSplash(); // se invoca a la ventana RunSplash         
+        new RunSplash();       
     } 
 }  
