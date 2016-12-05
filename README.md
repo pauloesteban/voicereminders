@@ -3,9 +3,9 @@ GUI para recordatorios de voz
 
 ### Integrantes:
 - Guillen Sanchez José - Product Owner
-- Ibarra Carreño Brayan - Scrum Master
+- Ibarra Carreño Brayan - Scrum Team
 - Troya Tito Jaime - Scrum Team
-- Zambrano Muñoz Jordy - Scrum Team
+- Zambrano Muñoz Jordy - Scrum Master
 
 ### Académico:
 Paulo Chiliguano
