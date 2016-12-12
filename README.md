@@ -16,10 +16,10 @@ Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versió
 
 ### TODO
 Por hacer:
-- Mostrar duración y niveles de señal de audio y botón de pausa durante grabación
-- Mostrar la hora de la grabación en formato estándar
-- Activar la funcionalidad de alarma
-- Desactivar botónes si no existen grabaciones
-- Aumento de nivel de entrada en Configuraciones
-- Diseño final de la interfaz gráfica
-- Vincular alarmas a los audios
+- Desactivar botónes si no existen grabaciones (Listo)
+- Mostrar la hora de la grabación en formato estándar (Listo)
+- Mostrar duración y niveles de señal de audio y botón de pausa durante grabación (En proceso)
+- Activar la funcionalidad de alarma (En proceso)
+- Diseño final de la interfaz gráfica (En proceso)
+- Aumento de nivel de entrada en Configuraciones (En espera)
+- Vincular alarmas a los audios (En espera)
