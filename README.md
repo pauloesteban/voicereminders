@@ -3,10 +3,10 @@ GUI para recordatorios de voz
 
 ### Integrantes:
 - Brayan Ibarra - Product Owner
-- Linda Huacón
-- Joshua Rosales
-- Álvaro Espinoza
-- Jhon Briones
+- Linda Huacón - Scrum Master
+- Joshua Rosales - Scrum Team
+- Álvaro Espinoza - Scrum Team
+- Jhon Briones - Scrum Team
 
 ### Académico:
 Paulo Chiliguano
