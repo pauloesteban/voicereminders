@@ -1,5 +1,6 @@
 package voice.reminder;
 
+import java.awt.Color;
 import java.io.File;
 import javax.swing.*;
 import javax.sound.sampled.*;
@@ -10,7 +11,18 @@ public class Plista extends javax.swing.JFrame {
     public Plista() {
         initComponents();
         this.setLocationRelativeTo(null);
+        //getContentPane().setBackground(Color.cyan);
         ActualizarLista();
+        if (modelo.getSize()<=0) {
+              btnPlay.setEnabled(false);
+              btnEliminar.setEnabled(false);
+              btnAlarma.setEnabled(false);
+            }
+        else {
+                btnPlay.setEnabled(true);
+              btnEliminar.setEnabled(true);
+              btnAlarma.setEnabled(true);
+                }
     }
     
     @SuppressWarnings("unchecked")
@@ -36,10 +48,8 @@ public class Plista extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(500, 400));
         setMinimumSize(new java.awt.Dimension(500, 400));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(500, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
@@ -55,7 +65,7 @@ public class Plista extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 80, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion1.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -182,7 +192,6 @@ public class Plista extends javax.swing.JFrame {
 
     private void btnPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayActionPerformed
         String audio1;
-        if (ListaNotas.getSelectedIndex()>-1) {
               audio1=ListaNotas.getSelectedValue().toString();
               try {
                 Clip sonido = AudioSystem.getClip();
@@ -196,21 +205,20 @@ public class Plista extends javax.swing.JFrame {
                 sonido.close();
                 } catch (Exception tipoerror) {
                     System.out.println("" + tipoerror);} 
-            } else {
-              javax.swing.JOptionPane. showMessageDialog (this,"NO HAY AUDIOS GUARDADOS");
-            }    
+  
     }//GEN-LAST:event_btnPlayActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         String audio;
-        if (ListaNotas.getSelectedIndex()>-1) {
               audio=ListaNotas.getSelectedValue().toString();
               File nota = new File("src\\Alarmas\\"+audio+".wav");
               nota.delete();
               ActualizarLista();
-        } else {
-            javax.swing.JOptionPane. showMessageDialog (this,"NO HAY AUDIOS GUARDADOS");
-        }
+              if (modelo.getSize()<=0) {
+                   btnPlay.setEnabled(false);
+                   btnEliminar.setEnabled(false);
+                   btnAlarma.setEnabled(false);
+                }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnAlarmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlarmaActionPerformed

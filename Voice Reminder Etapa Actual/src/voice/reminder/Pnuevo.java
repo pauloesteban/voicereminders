@@ -56,7 +56,7 @@ public class Pnuevo extends javax.swing.JFrame {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 280, 70));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 120));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Retornar");
@@ -64,7 +64,7 @@ public class Pnuevo extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel4.setText("Detener");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion1.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -108,7 +108,7 @@ public class Pnuevo extends javax.swing.JFrame {
                 btnGrabarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 80, 80));
+        getContentPane().add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 80, 80));
 
         btnParar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stop.png"))); // NOI18N
         btnParar.setBorder(null);
@@ -120,7 +120,7 @@ public class Pnuevo extends javax.swing.JFrame {
                 btnPararActionPerformed(evt);
             }
         });
-        getContentPane().add(btnParar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 110, 80));
+        getContentPane().add(btnParar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 110, 80));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("Ajustes");
@@ -132,7 +132,7 @@ public class Pnuevo extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel12.setText("Grabar");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -165,7 +165,7 @@ public class Pnuevo extends javax.swing.JFrame {
       btnParar.setEnabled(true);
       Calendar cal=Calendar.getInstance(); 
       fecha = cal.get(cal.DATE)+"-"+(cal.get(cal.MONTH)+1)+"-"+cal.get(cal.YEAR);
-      tiempo = cal.get(cal.HOUR_OF_DAY)+"-"+cal.get(cal.MINUTE);
+      tiempo = cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);
       try{
       audioFormat = getAudioFormat();
       DataLine.Info dataLineInfo =
