@@ -18,7 +18,8 @@ Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versió
 Por hacer:
 - Desactivar botónes si no existen grabaciones (Listo)
 - Mostrar la hora de la grabación en formato estándar (Listo)
-- Mostrar duración y niveles de señal de audio y botón de pausa durante grabación (En proceso)
+- Mostrar duración de audio (Listo) 
+- Botón de pausa durante grabación (En proceso)
 - Activar la funcionalidad de alarma (En proceso)
 - Diseño final de la interfaz gráfica (En proceso)
 - Aumento de nivel de entrada en Configuraciones (En espera)
