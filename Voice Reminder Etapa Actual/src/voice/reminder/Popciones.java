@@ -2,15 +2,23 @@
 package voice.reminder;
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class Popciones extends javax.swing.JFrame {
 
                 String colorSelec;
+                int color;
 
     public Popciones() {
         initComponents();
         this.setLocationRelativeTo(null);
-        String colorSelec;
+        LeerColor();
+        ElegirColor();
     }
 
     @SuppressWarnings("unchecked")
@@ -85,28 +93,89 @@ public class Popciones extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-          colorSelec=jComboBox1.getSelectedItem().toString();
-        
-        if(colorSelec=="Azul"){
+public void LeerColor(){
+        try{
+        FileReader lectorArchivo; 
+        File f = new File("src\\Alarmas\\Color.txt");
+        lectorArchivo = new FileReader(f);
+        BufferedReader br = new BufferedReader(lectorArchivo);
+        color=Integer.parseInt(br.readLine());
+        br.close();
+        lectorArchivo.close();
+        }catch(IOException e){
+        System.out.println("Error:"+e.getMessage());}
+    }
+    
+    public void ElegirColor(){
+       if(color==1){
             this.getContentPane().setBackground(Color.BLUE);
         }else{
+        if(color==2){
+            this.getContentPane().setBackground(Color.YELLOW);
+        }else
+        if(color==3){
+            this.getContentPane().setBackground(Color.ORANGE);
+        }else{
+        if(color==4){
+            this.getContentPane().setBackground(Color.RED);
+        }else{
+        if(color==5){
+            this.getContentPane().setBackground(Color.GREEN);
+        }else{
+        if(color==6){
+            this.getContentPane().setBackground(Color.PINK);
+        }else{
+        if(color==7){
+            this.getContentPane().setBackground(Color.MAGENTA);
+        } else{
+        if (color==8){
+            this.getContentPane().setBackground(Color.GRAY);
+        } else{
+            this.getContentPane().setBackground(Color.CYAN);
+        }}}}}}} 
+    }
+    
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+          colorSelec=jComboBox1.getSelectedItem().toString();        
+        if(colorSelec=="Azul"){
+            this.getContentPane().setBackground(Color.BLUE);
+            color=1;
+        }else{
             if(colorSelec=="Amarillo"){
-                this.getContentPane().setBackground(Color.yellow);
+                this.getContentPane().setBackground(Color.YELLOW);
+                color=2;
             }else
                 if(colorSelec=="Naranja"){
                     this.getContentPane().setBackground(Color.ORANGE);
+                    color=3;
                 }else{
                     if(colorSelec=="Rojo"){
                         this.getContentPane().setBackground(Color.RED);
+                        color=4;
                     }else{
                         if(colorSelec=="Verde"){
                             this.getContentPane().setBackground(Color.GREEN);
+                            color=5;
                         }else{
-                            this.getContentPane().setBackground(Color.cyan);
+                            if(colorSelec=="Rosa"){
+                            this.getContentPane().setBackground(Color.PINK);
+                            color=6;
+                        }else{
+                            if(colorSelec=="Magenta"){
+                            this.getContentPane().setBackground(Color.MAGENTA);
+                            color=7;
+                        } else{
+                                if (colorSelec=="Gris"){
+                                    this.getContentPane().setBackground(Color.GRAY);
+                                    color=8;
+                                } else{
+                            this.getContentPane().setBackground(Color.CYAN);
+                                }
+                                    }
                         }
                     }
                 }
+        }
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -170,7 +239,16 @@ public class Popciones extends javax.swing.JFrame {
     }*/
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        getContentPane().setBackground(Color.BLUE);
+        try{
+        FileWriter lectorArchivo; 
+        File f = new File("src\\Alarmas\\Color.txt");
+        lectorArchivo = new FileWriter(f);
+        BufferedWriter bw = new BufferedWriter(lectorArchivo);
+        bw.append(""+color);
+        bw.close();
+        lectorArchivo.close();
+        }catch(IOException e){
+        System.out.println("Error:"+e.getMessage());}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

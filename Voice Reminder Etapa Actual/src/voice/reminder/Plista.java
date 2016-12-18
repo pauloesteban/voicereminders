@@ -1,17 +1,22 @@
 package voice.reminder;
 
 import java.awt.Color;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import javax.swing.*;
 import javax.sound.sampled.*;
 import java.util.*;
 
 public class Plista extends javax.swing.JFrame {
-
+    String SelecColor;
+    int color;
     public Plista() {
         initComponents();
         this.setLocationRelativeTo(null);
-        //getContentPane().setBackground(Color.cyan);
+        LeerColor();
+        ElegirColor();
         ActualizarLista();
         if (modelo.getSize()<=0) {
               btnPlay.setEnabled(false);
@@ -24,7 +29,48 @@ public class Plista extends javax.swing.JFrame {
               btnAlarma.setEnabled(true);
                 }
     }
+public void LeerColor(){
+        try{
+        FileReader lectorArchivo; 
+        File f = new File("src\\Alarmas\\Color.txt");
+        lectorArchivo = new FileReader(f);
+        BufferedReader br = new BufferedReader(lectorArchivo);
+        color=Integer.parseInt(br.readLine());
+        br.close();
+        lectorArchivo.close();
+        }catch(IOException e){
+        System.out.println("Error:"+e.getMessage());}
+    }
     
+    public void ElegirColor(){
+       if(color==1){
+            this.getContentPane().setBackground(Color.BLUE);
+        }else{
+        if(color==2){
+            this.getContentPane().setBackground(Color.YELLOW);
+        }else
+        if(color==3){
+            this.getContentPane().setBackground(Color.ORANGE);
+        }else{
+        if(color==4){
+            this.getContentPane().setBackground(Color.RED);
+        }else{
+        if(color==5){
+            this.getContentPane().setBackground(Color.GREEN);
+        }else{
+        if(color==6){
+            this.getContentPane().setBackground(Color.PINK);
+        }else{
+        if(color==7){
+            this.getContentPane().setBackground(Color.MAGENTA);
+        } else{
+        if (color==8){
+            this.getContentPane().setBackground(Color.GRAY);
+        } else{
+            this.getContentPane().setBackground(Color.CYAN);
+        }}}}}}} 
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
