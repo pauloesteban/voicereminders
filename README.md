@@ -22,5 +22,5 @@ Acciones:
 - [x] Activar la funcionalidad de alarma
 - [x] Vincular alarmas a los audios
 - [x] Diseño final de la interfaz gráfica
-- [] Aumento de nivel de entrada en Configuraciones (En Proceso)
-- [] Botón de pausa durante grabación (En proceso)
+- [ ] Aumento de nivel de entrada en Configuraciones (En Proceso)
+- [ ] Botón de pausa durante grabación (En proceso)
