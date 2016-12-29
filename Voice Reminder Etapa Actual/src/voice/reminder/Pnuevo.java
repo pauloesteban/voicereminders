@@ -12,8 +12,6 @@ import java.util.*;
 import java.awt.Color;
 
 public class Pnuevo extends javax.swing.JFrame {
-    String SelectColor;
-    int color;
     public Pnuevo() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -21,47 +19,7 @@ public class Pnuevo extends javax.swing.JFrame {
         LeerColor();
         ElegirColor();
     }
-public void LeerColor(){
-        try{
-        FileReader lectorArchivo; 
-        File f = new File("src\\Alarmas\\Color.txt");
-        lectorArchivo = new FileReader(f);
-        BufferedReader br = new BufferedReader(lectorArchivo);
-        color=Integer.parseInt(br.readLine());
-        br.close();
-        lectorArchivo.close();
-        }catch(IOException e){
-        System.out.println("Error:"+e.getMessage());}
-    }
     
-    public void ElegirColor(){
-       if(color==1){
-            this.getContentPane().setBackground(Color.BLUE);
-        }else{
-        if(color==2){
-            this.getContentPane().setBackground(Color.YELLOW);
-        }else
-        if(color==3){
-            this.getContentPane().setBackground(Color.ORANGE);
-        }else{
-        if(color==4){
-            this.getContentPane().setBackground(Color.RED);
-        }else{
-        if(color==5){
-            this.getContentPane().setBackground(Color.GREEN);
-        }else{
-        if(color==6){
-            this.getContentPane().setBackground(Color.PINK);
-        }else{
-        if(color==7){
-            this.getContentPane().setBackground(Color.MAGENTA);
-        } else{
-        if (color==8){
-            this.getContentPane().setBackground(Color.GRAY);
-        } else{
-            this.getContentPane().setBackground(Color.CYAN);
-        }}}}}}} 
-    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -78,6 +36,9 @@ public void LeerColor(){
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        lblTime = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImages(null);
@@ -108,8 +69,8 @@ public void LeerColor(){
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel4.setText("Detener");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, -1, -1));
+        jLabel4.setText("Hrs : Min : Sg : mSg");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion1.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -177,13 +138,98 @@ public void LeerColor(){
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel12.setText("Grabar");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
+
+        lblTime.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        lblTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTime.setText("0:0:0:0");
+        getContentPane().add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 229, -1));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel5.setText("Detener");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel7.setText("DURACIÓN DE LA GRABACIÓN");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    public String fecha;
-    public String tiempo;
+    public String tiempo, fecha;
+    int hora = 0, min = 0, seg = 0, ds = 0, color;
+    public boolean issuspended = false;
+    public boolean suspPausa = false;
+    
+    Thread hilo = new Thread() {
+
+        @Override
+        public void run() {
+            try {
+                while (true) {
+                    if (ds == 99) {
+                        ds = 0;
+                        seg++;
+                    }
+                    if (seg == 59) {
+                        seg = 0;
+                        min++;
+                    }
+                    if (min == 59) {
+                        min = 0;
+                        hora++;
+                    }
+                    ds++;
+                    lblTime.setText(hora + ":" + min + ":" + seg + ":" + ds);
+                    hilo.sleep(10);
+                }
+            } catch (java.lang.InterruptedException ie) {
+                System.out.println(ie.getMessage());
+            }
+        }
+    };
+    
+    public void LeerColor(){
+        try{
+        FileReader lectorArchivo; 
+        File f = new File("src\\Alarmas\\Color.txt");
+        lectorArchivo = new FileReader(f);
+        BufferedReader br = new BufferedReader(lectorArchivo);
+        color=Integer.parseInt(br.readLine());
+        br.close();
+        lectorArchivo.close();
+        }catch(IOException e){
+        System.out.println("Error:"+e.getMessage());}
+    }
+    
+    public void ElegirColor(){
+       if(color==1){
+            this.getContentPane().setBackground(Color.BLUE);
+        }else{
+        if(color==2){
+            this.getContentPane().setBackground(Color.YELLOW);
+        }else
+        if(color==3){
+            this.getContentPane().setBackground(Color.ORANGE);
+        }else{
+        if(color==4){
+            this.getContentPane().setBackground(Color.RED);
+        }else{
+        if(color==5){
+            this.getContentPane().setBackground(Color.GREEN);
+        }else{
+        if(color==6){
+            this.getContentPane().setBackground(Color.PINK);
+        }else{
+        if(color==7){
+            this.getContentPane().setBackground(Color.MAGENTA);
+        } else{
+        if (color==8){
+            this.getContentPane().setBackground(Color.GRAY);
+        } else{
+            this.getContentPane().setBackground(Color.CYAN);
+        }}}}}}} 
+    }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Ppagina1 obj=new Ppagina1();
@@ -210,7 +256,23 @@ public void LeerColor(){
       btnParar.setEnabled(true);
       Calendar cal=Calendar.getInstance(); 
       fecha = cal.get(cal.DATE)+"-"+(cal.get(cal.MONTH)+1)+"-"+cal.get(cal.YEAR);
-      tiempo = cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);
+      int Hora, Minuto, Segundos;
+      Hora = cal.get(cal.HOUR_OF_DAY);
+      Minuto = cal.get(cal.MINUTE);
+      Segundos = cal.get(cal.SECOND);
+      if (Segundos>9&&Minuto>9&&Segundos>9){tiempo = cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
+      if (Hora<9&&Minuto>9&&Segundos>9){tiempo = "0"+cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
+      if (Hora>9&&Minuto<9&&Segundos>9){tiempo = cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);} 
+      if (Hora>9&&Minuto>9&&Segundos<9){tiempo = cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";0"+cal.get(cal.SECOND);}
+      if (Hora<9&&Minuto<9&&Segundos>9){tiempo = "0"+cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
+      if (Hora<9&&Minuto>9&&Segundos<9){tiempo = "0"+cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";0"+cal.get(cal.SECOND);}
+      if (Hora>9&&Minuto<9&&Segundos<9){tiempo = cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";0"+cal.get(cal.SECOND);}
+      if (!issuspended) {
+            hilo.start();
+        } else {
+            hilo.resume();
+            issuspended = false;
+        }
       try{
       audioFormat = getAudioFormat();
       DataLine.Info dataLineInfo =
@@ -236,6 +298,10 @@ public void LeerColor(){
           targetDataLine.close();
           btnParar.setEnabled(false);
           btnGrabar.setEnabled(true);
+          hilo.suspend();
+          ds = seg = min = hora = 0;
+          lblTime.setText("0:0:0:0");
+          issuspended = true;
         }
       }  
     );
@@ -323,8 +389,11 @@ class CaptureThread extends Thread{
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblTime;
     // End of variables declaration//GEN-END:variables
 
     private void disipose() {

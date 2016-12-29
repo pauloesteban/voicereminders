@@ -9,10 +9,11 @@ import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
+
 public class Popciones extends javax.swing.JFrame {
 
-                String colorSelec;
-                int color;
+    String colorSelec;
+    int color;
 
     public Popciones() {
         initComponents();
@@ -41,13 +42,13 @@ public class Popciones extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(500, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Azul", "Rojo", "Naranja", "Verde", "Celeste" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Azul", "Amarillo", "Celeste", "Gris", "Magenta", "Naranja", "Rojo", "Rosa", "Verde" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 110, 40));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 110, 40));
 
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +56,7 @@ public class Popciones extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 120, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 120, 40));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -66,7 +67,7 @@ public class Popciones extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -77,15 +78,15 @@ public class Popciones extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 80, 60));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, 80, 60));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Color de Aplicación:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 160, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 160, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel3.setText("Retornar");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
@@ -93,7 +94,7 @@ public class Popciones extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-public void LeerColor(){
+    public void LeerColor(){
         try{
         FileReader lectorArchivo; 
         File f = new File("src\\Alarmas\\Color.txt");
@@ -135,8 +136,9 @@ public void LeerColor(){
         }}}}}}} 
     }
     
+    
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-          colorSelec=jComboBox1.getSelectedItem().toString();        
+         colorSelec=jComboBox1.getSelectedItem().toString();        
         if(colorSelec=="Azul"){
             this.getContentPane().setBackground(Color.BLUE);
             color=1;
@@ -187,56 +189,8 @@ public void LeerColor(){
         Ppagina1 obj=new Ppagina1();
         obj.setVisible(true);
         dispose();
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
-        /*public void ElegirColor (){
-        
-        Ppagina1 formu1=new Ppagina1();
-        Pnuevo formu2=new Pnuevo();
-        Plista formu3=new Plista();
-        Popciones formu4=new Popciones();
-        String color;
-        color=jComboBox1.getSelectedItem().toString();
-        if(color=="Azul"){
-            formu1.getContentPane().setBackground(Color.BLUE);
-            formu2.getContentPane().setBackground(Color.BLUE);
-            formu3.getContentPane().setBackground(Color.BLUE);
-            formu4.getContentPane().setBackground(Color.BLUE);
-        }else{
-            if(color=="Amarillo"){
-                formu1.getContentPane().setBackground(Color.yellow);
-                formu2.getContentPane().setBackground(Color.YELLOW);
-                formu3.getContentPane().setBackground(Color.BLUE);
-                formu4.getContentPane().setBackground(Color.BLUE);
-            }else
-                if(color=="Naranja"){
-                    formu1.getContentPane().setBackground(Color.ORANGE);
-                    formu2.getContentPane().setBackground(Color.ORANGE);
-                    formu3.getContentPane().setBackground(Color.BLUE);
-                    formu4.getContentPane().setBackground(Color.BLUE);
-                }else{
-                    if(color=="Rojo"){
-                        formu1.getContentPane().setBackground(Color.RED);
-                        formu2.getContentPane().setBackground(Color.RED);
-                        formu3.getContentPane().setBackground(Color.BLUE);
-                        formu4.getContentPane().setBackground(Color.BLUE);
-                    }else{
-                        if(color=="Verde"){
-                            formu1.getContentPane().setBackground(Color.GREEN);
-                            formu2.getContentPane().setBackground(Color.GREEN);
-                            formu3.getContentPane().setBackground(Color.BLUE);
-                            formu4.getContentPane().setBackground(Color.BLUE);
-                        }else{
-                            formu1.getContentPane().setBackground(Color.cyan);
-                            formu2.getContentPane().setBackground(Color.cyan);
-                            formu3.getContentPane().setBackground(Color.BLUE);
-                            formu4.getContentPane().setBackground(Color.BLUE);
-                        }
-                    }
-                }
-        }
-    }*/
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try{
