@@ -12,15 +12,15 @@ GUI para recordatorios de voz
 Paulo Chiliguano
 
 ### NOTA:
-Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versión 1.3.3.
+Para ejecutar el programa es necesario instalar la librerìa "jcalendar" versión 1.3.3 y tener las herramientas del JAR en una paleta.
 
 ### TODO
 Acciones:
-- Desactivar botónes si no existen grabaciones (Listo)
-- Mostrar la hora de la grabación en formato estándar (Listo)
-- Mostrar duración de audio (Listo) 
-- Activar la funcionalidad de alarma (Listo)
-- Vincular alarmas a los audios (listo)
-- Diseño final de la interfaz gráfica (Listo)
-- Aumento de nivel de entrada en Configuraciones (En Proceso)
-- Botón de pausa durante grabación (En proceso)
+- [x] Desactivar botónes si no existen grabaciones
+- [x] Mostrar la hora de la grabación en formato estándar
+- [x] Mostrar duración de audio
+- [x] Activar la funcionalidad de alarma
+- [x] Vincular alarmas a los audios
+- [x] Diseño final de la interfaz gráfica
+- [] Aumento de nivel de entrada en Configuraciones (En Proceso)
+- [] Botón de pausa durante grabación (En proceso)
