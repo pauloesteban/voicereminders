@@ -6,13 +6,16 @@ import javax.swing.*;
 
 public class Ppagina1 extends javax.swing.JFrame {
 
-    public int color;
+    public int color, elegir;
+    public String idioma;
     
     public Ppagina1() {
         initComponents();
         setLocationRelativeTo(null);
         LeerColor();
         ElegirColor();
+        LeerIdioma();
+        cambiarIdioma();
     }    
    
     public void LeerColor(){
@@ -22,6 +25,19 @@ public class Ppagina1 extends javax.swing.JFrame {
         lectorArchivo = new FileReader(f);
         BufferedReader br = new BufferedReader(lectorArchivo);
         color=Integer.parseInt(br.readLine());
+        br.close();
+        lectorArchivo.close();
+        }catch(IOException e){
+        System.out.println("Error:"+e.getMessage());}
+    }
+    
+    public void LeerIdioma(){
+        try{
+        FileReader lectorArchivo; 
+        File f = new File("src\\Alarmas\\Idioma.txt");
+        lectorArchivo = new FileReader(f);
+        BufferedReader br = new BufferedReader(lectorArchivo);
+        idioma=br.readLine();
         br.close();
         lectorArchivo.close();
         }catch(IOException e){
@@ -57,6 +73,16 @@ public class Ppagina1 extends javax.swing.JFrame {
         }}}}}}} 
     }
     
+     public void cambiarIdioma(){
+        Idioma idiomaNum = new Idioma(idioma);
+        jLabel6.setText(idiomaNum.getProperty("crear"));
+        jLabel5.setText(idiomaNum.getProperty("recordar"));
+        jLabel8.setText(idiomaNum.getProperty("nuevo"));
+        jLabel7.setText(idiomaNum.getProperty("creados"));
+        jLabel4.setText(idiomaNum.getProperty("ajustes"));
+        jLabel9.setText(idiomaNum.getProperty("ayuda"));
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -75,13 +101,14 @@ public class Ppagina1 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(500, 400));
-        setMinimumSize(new java.awt.Dimension(500, 400));
+        setMaximumSize(new java.awt.Dimension(600, 500));
+        setMinimumSize(new java.awt.Dimension(600, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(500, 400));
+        setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lista1.png"))); // NOI18N
@@ -96,11 +123,11 @@ public class Ppagina1 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 150, 150));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 150, 150));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 170, 130));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Nuebos1.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -114,7 +141,7 @@ public class Ppagina1 extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 199, 166));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 199, 166));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion1.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -128,7 +155,7 @@ public class Ppagina1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 70, 65));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 70, 65));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar.png"))); // NOI18N
         jButton4.setBorder(null);
@@ -140,40 +167,49 @@ public class Ppagina1 extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ayuda.png"))); // NOI18N
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
         jButton5.setContentAreaFilled(false);
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 64, 55));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 64, 55));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("RECORDATORIO");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 150, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 150, 30));
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setText("CREAR NUEVO");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 130, 30));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 140, 30));
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText(" CREADOS");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 100, 30));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 100, 30));
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel8.setText("VER RECORDATORIOS");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 200, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 210, 30));
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setText("Ajustes");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("Ayuda");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, -1, -1));
+
+        jButton6.setBackground(new java.awt.Color(255, 0, 0));
+        jButton6.setForeground(new java.awt.Color(255, 0, 0));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 50, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -199,6 +235,10 @@ public class Ppagina1 extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     
     public static void main(String args[]) {
@@ -231,6 +271,7 @@ public class Ppagina1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

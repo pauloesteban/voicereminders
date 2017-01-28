@@ -40,7 +40,6 @@ public class Plista extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnPlay = new javax.swing.JButton();
@@ -48,7 +47,6 @@ public class Plista extends javax.swing.JFrame {
         modelo = new DefaultListModel();
         ListaNotas = new javax.swing.JList();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btnBorrar = new javax.swing.JButton();
         btnAlarma = new javax.swing.JButton();
@@ -58,10 +56,13 @@ public class Plista extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         btnEliminar = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(500, 400));
+        setMaximumSize(new java.awt.Dimension(600, 500));
+        setMinimumSize(new java.awt.Dimension(600, 500));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
@@ -74,24 +75,10 @@ public class Plista extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 80, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 80, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion1.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion2.png"))); // NOI18N
-        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion2.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 60, 80));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 120));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar.png"))); // NOI18N
         jButton3.setBorder(null);
@@ -102,22 +89,23 @@ public class Plista extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, 60));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, 60));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ayuda.png"))); // NOI18N
         jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 80, 80));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 70, 80));
 
+        btnPlay.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnPlay.setText("Reproducir Audio");
         btnPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPlayActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 130, -1));
+        getContentPane().add(btnPlay, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 140, -1));
 
         ListaNotas.setModel(modelo);
         ListaNotas.setToolTipText("Audios Almacenados");
@@ -128,42 +116,44 @@ public class Plista extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(ListaNotas);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 190, 210));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 170, 210));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Retornar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel6.setText("Ajustes");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
-
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("Ayuda");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, -1, -1));
 
+        btnBorrar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnBorrar.setText("Borrar Alarma");
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 130, -1));
+        getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 140, -1));
 
+        btnAlarma.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnAlarma.setText("Activar Alarma");
         btnAlarma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlarmaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAlarma, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 130, -1));
-        getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 60, 40));
+        getContentPane().add(btnAlarma, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 140, -1));
 
+        txtTotal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 80, 30));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("Cantidad de notas guardadas:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 180, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 180, 30));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("FECHA                 HORA");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 140, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 140, -1));
 
         jScrollPane3.setBorder(null);
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -173,21 +163,31 @@ public class Plista extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "DATOS DE AUDIO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "DATOS DE AUDIO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
         jTextArea1.setMaximumSize(new java.awt.Dimension(10, 30));
         jTextArea1.setMinimumSize(new java.awt.Dimension(10, 30));
         jScrollPane3.setViewportView(jTextArea1);
         jTextArea1.getAccessibleContext().setAccessibleParent(jTextArea1);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 250, 130));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 250, 130));
 
+        btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnEliminar.setText("Eliminar Audio");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 130, -1));
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 140, -1));
+
+        jButton6.setBackground(new java.awt.Color(255, 0, 0));
+        jButton6.setForeground(new java.awt.Color(255, 0, 0));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 50, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -264,6 +264,7 @@ public class Plista extends javax.swing.JFrame {
         jTextArea1.setText("");
         String audioSelec;
         audioSelec=ListaNotas.getSelectedValue().toString();
+        if (audioSelec!=null||audioSelec!=""){
         String sFichero = "src\\Alarmas\\"+audioSelec+".txt";
         File fichero = new File(sFichero);
         if (fichero.exists()){
@@ -280,7 +281,8 @@ public class Plista extends javax.swing.JFrame {
                 Logger.getLogger(Plista.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
-            jTextArea1.append("No Hay Alarma Activa");}
+            jTextArea1.append("No Hay Alarma Activa");}}
+        else{jTextArea1.append("");}
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -288,12 +290,6 @@ public class Plista extends javax.swing.JFrame {
     obj.setVisible(true);
     dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         Popciones b=new Popciones();
-         b.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         System.exit(0);
@@ -363,8 +359,7 @@ public class Plista extends javax.swing.JFrame {
                    btnAlarma.setEnabled(false);
                    jTextArea1.setText("");
                 } else{VerDatos();}}
-            else
-            System.out.println("El audio no puede ser borrado");}
+            else System.out.println("El audio no puede ser borrado");}
             else {
                 if (nota.delete()){
                     ActualizarLista();
@@ -384,6 +379,10 @@ public class Plista extends javax.swing.JFrame {
             VerDatos();
         }
     }//GEN-LAST:event_ListaNotasValueChanged
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
 
     public static void main(String args[]) { 
@@ -419,14 +418,13 @@ public class Plista extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnPlay;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;

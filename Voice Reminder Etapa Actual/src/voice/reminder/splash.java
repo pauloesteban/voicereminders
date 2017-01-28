@@ -30,10 +30,12 @@ public class splash extends javax.swing.JPanel {
             Thread.sleep(40); 
             progreso.setForeground(Color.RED); 
             progreso.setValue(i); 
-            if (i == 40) {
-               estados.setText("Versión 1.3"); 
+            if (i == 30) {
+               estados.setText("ESTADO BETA");
             }
-            
+            if (i == 60) {
+               estados.setText("DISFRUTE");
+            }
         } 
     } 
 
@@ -45,15 +47,19 @@ public class splash extends javax.swing.JPanel {
         progreso = new javax.swing.JProgressBar();
         estados = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(600, 500));
+        setMinimumSize(new java.awt.Dimension(600, 500));
+        setPreferredSize(new java.awt.Dimension(600, 500));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         progreso.setBackground(new java.awt.Color(255, 128, 0));
         progreso.setForeground(new java.awt.Color(255, 204, 0));
         progreso.setBorderPainted(false);
-        add(progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 374, 500, 30));
+        add(progreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 374, 610, 30));
 
-        estados.setText("Cargando modulos");
-        add(estados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
+        estados.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+        estados.setText("CARGANDO MÓDULOS");
+        add(estados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 210, 30));
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel estados;

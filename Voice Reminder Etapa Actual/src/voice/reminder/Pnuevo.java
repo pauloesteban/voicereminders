@@ -28,24 +28,23 @@ public class Pnuevo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         btnGrabar = new javax.swing.JButton();
         btnParar = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         lblTime = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImages(null);
-        setMaximumSize(new java.awt.Dimension(500, 400));
-        setMinimumSize(new java.awt.Dimension(500, 400));
+        setMaximumSize(new java.awt.Dimension(600, 500));
+        setMinimumSize(new java.awt.Dimension(600, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(500, 400));
+        setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
@@ -58,33 +57,19 @@ public class Pnuevo extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 100, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 100, 50));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 120));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 180, 120));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Retornar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel4.setText("Hrs : Min : Sg : mSg");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion1.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion2.png"))); // NOI18N
-        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/configuracion2.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 60, 60));
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setText("Hrs   :   Min  :   Sg    : mSg");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 340, 220, -1));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar.png"))); // NOI18N
         jButton4.setBorder(null);
@@ -95,14 +80,14 @@ public class Pnuevo extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ayuda.png"))); // NOI18N
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
         jButton5.setContentAreaFilled(false);
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
 
         btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Grabar1.png"))); // NOI18N
         btnGrabar.setBorder(null);
@@ -114,7 +99,7 @@ public class Pnuevo extends javax.swing.JFrame {
                 btnGrabarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 80, 80));
+        getContentPane().add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 80, 80));
 
         btnParar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stop.png"))); // NOI18N
         btnParar.setBorder(null);
@@ -126,32 +111,37 @@ public class Pnuevo extends javax.swing.JFrame {
                 btnPararActionPerformed(evt);
             }
         });
-        getContentPane().add(btnParar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 110, 80));
+        getContentPane().add(btnParar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 110, 80));
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel6.setText("Ajustes");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, -1, -1));
-
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("Ayuda");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel12.setText("Grabar");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
 
         lblTime.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         lblTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTime.setText("0:0:0:0");
-        getContentPane().add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 229, -1));
+        lblTime.setText("00:00:00:00");
+        getContentPane().add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 229, -1));
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel5.setText("Detener");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("DURACIÓN DE LA GRABACIÓN");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
+
+        jButton6.setBackground(new java.awt.Color(255, 0, 0));
+        jButton6.setForeground(new java.awt.Color(255, 0, 0));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 50, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -181,7 +171,7 @@ public class Pnuevo extends javax.swing.JFrame {
                     }
                     ds++;
                     lblTime.setText(hora + ":" + min + ":" + seg + ":" + ds);
-                    hilo.sleep(10);
+                    hilo.sleep(9);
                 }
             } catch (java.lang.InterruptedException ie) {
                 System.out.println(ie.getMessage());
@@ -238,12 +228,6 @@ public class Pnuevo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         Popciones b=new Popciones();
-         b.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -255,13 +239,15 @@ public class Pnuevo extends javax.swing.JFrame {
       btnGrabar.setEnabled(false);
       btnParar.setEnabled(true);
       Calendar cal=Calendar.getInstance(); 
-      fecha = cal.get(cal.DATE)+"-"+(cal.get(cal.MONTH)+1)+"-"+cal.get(cal.YEAR);
+      if (cal.get(cal.DATE)>9&&cal.get(cal.MONTH)>8){fecha = cal.get(cal.DATE)+"-"+(cal.get(cal.MONTH)+1)+"-"+cal.get(cal.YEAR);}
+      if (cal.get(cal.DATE)<9&&cal.get(cal.MONTH)>8){fecha = "0"+cal.get(cal.DATE)+"-"+(cal.get(cal.MONTH)+1)+"-"+cal.get(cal.YEAR);}
+      if (cal.get(cal.DATE)>9&&cal.get(cal.MONTH)<8){fecha = cal.get(cal.DATE)+"-0"+(cal.get(cal.MONTH)+1)+"-"+cal.get(cal.YEAR);}
       int Hora, Minuto, Segundos;
       Hora = cal.get(cal.HOUR_OF_DAY);
       Minuto = cal.get(cal.MINUTE);
       Segundos = cal.get(cal.SECOND);
       if (Segundos>9&&Minuto>9&&Segundos>9){tiempo = cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
-      if (Hora<9&&Minuto>9&&Segundos>9){tiempo = "0"+cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
+      if (Hora<9&&Minuto>9&&Segundos>9){tiempo = "0"+cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
       if (Hora>9&&Minuto<9&&Segundos>9){tiempo = cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);} 
       if (Hora>9&&Minuto>9&&Segundos<9){tiempo = cal.get(cal.HOUR_OF_DAY)+";"+cal.get(cal.MINUTE)+";0"+cal.get(cal.SECOND);}
       if (Hora<9&&Minuto<9&&Segundos>9){tiempo = "0"+cal.get(cal.HOUR_OF_DAY)+";0"+cal.get(cal.MINUTE)+";"+cal.get(cal.SECOND);}
@@ -300,12 +286,16 @@ public class Pnuevo extends javax.swing.JFrame {
           btnGrabar.setEnabled(true);
           hilo.suspend();
           ds = seg = min = hora = 0;
-          lblTime.setText("0:0:0:0");
+          lblTime.setText("00:00:00:00");
           issuspended = true;
         }
       }  
     );
     }//GEN-LAST:event_btnPararActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_jButton6ActionPerformed
      
    
   private AudioFormat getAudioFormat(){
@@ -382,15 +372,14 @@ class CaptureThread extends Thread{
     private javax.swing.JButton btnGrabar;
     private javax.swing.JButton btnParar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblTime;
